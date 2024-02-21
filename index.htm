@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometric Figures Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Geometric Figures Calculator</h1>
+    <div>
+      <label for="figure">Select a figure:</label>
+      <select id="figure">
+        <option value="triangle">Triangle</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="circle">Circle</option>
+        <option value="square">Square</option>
+      </select>
+
+      <div id="triangleFields" class="fields">
+        <input type="number" id="triangleBase" placeholder="Base" required />
+        <input
+          type="number"
+          id="triangleHeight"
+          placeholder="Height"
+          required
+        />
+      </div>
+
+      <div id="rectangleFields" class="fields" style="display: none">
+        <input
+          type="number"
+          id="rectangleLength"
+          placeholder="Length"
+          required
+        />
+        <input type="number" id="rectangleWidth" placeholder="Width" required />
+      </div>
+
+      <div id="circleFields" class="fields" style="display: none">
+        <input type="number" id="circleRadius" placeholder="Radius" required />
+      </div>
+
+      <div id="squareFields" class="fields" style="display: none">
+        <input type="number" id="squareSide" placeholder="Side" required />
+        <!-- <input type="number" id="rectangleWidth" placeholder="Width" required /> -->
+      </div>
+
+      <button id="calculateBtn">Calculate</button>
+    </div>
+
+    <div id="result" style="display: none">
+      <h2>Result:</h2>
+      <p id="area"></p>
+      <p id="perimeter"></p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
